@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+*:focus{
+    outline: none;
+}
+
+body{
+    position: relative;
+    background: #000000;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: var(--Background-Color, #212121);
+    display: flex;
+    align-items: center;
+    padding: 0 2.5vw;
+}
+
+.toggle-btn{
+    width: 20px;
+    height: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-btn span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #979797;
+}
+
+.toggle-btn span:nth-child(1){
+    top: 0;
+}
+
+.toggle-btn span:nth-child(3){
+    top: 100%;
+}
+
+.logo{
+    height: 30px;
+    margin: -10px 30px 0;
+}
+
+.search-box{
+    position: relative;
+    max-width: 500px;
+    width: 50%;
+    height: 35px;
+    display: flex;
+}
+
+.search-bar{
+    width: 85%;
+    height: 100%;
+    border: none;
+    background-color: #121212;
+    padding: 0 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.search-bar:focus{
+    color: #fff; 
+}
+
+.search-btn{
+    width: 15%;
+    height: 100%;
+    background: #303030;
+    border: none;
+    padding: 5px 0;
+    border-left: none;
+    cursor: pointer;
+}
+
+.search-btn,.mic img{
+    height: 100%;
+}
+
+.mic{
+    margin-left: 10px;
+    width: 8%;
+    height: 110%;
+    background-color: #000000;
+    border: none;
+    border-radius: 50%;
+    padding: 8px 0;
+}
+
+.user-options{
+    height: 35px;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.user-options .icon{
+    height: 80%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/* Side bar ===================*/
+
+.side-bar{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    min-height: 250px;
+    width: 250px;
+    height: calc(100vh);
+    background: #212121;
+    padding-right: 10px;
+}
+
+.links{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    gap: 20px;
+}
+
+.links img{
+    height: 25px;
+}
+
+.links:hover,.links.active{
+    background: var(--border-color, #303030);
+}
+
+.seperator{
+    border: none;
+    border-bottom: 1px solid #303030;
+    margin: 20px 0;
+}
+
+/* Filters */
+
+.filters{
+    position: fixed;
+    left: 250px;
+    top: 60px;
+    width: calc(100% -250px);
+    height: 60px;
+    background: #303030;
+    border-top: 1px solid #303030;
+    border-bottom: 1px solid #303030;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.filters::-webkit-scrollbar{
+    display: none;
+}
+
+.filter-options{
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: #303030;
+    border: 1px solid #dbdadaab;
+    margin-right: 10px;
+    color: #AAAAAA;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.filter-options.active{
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Video container */
+
+.video-container{
+    width: calc(100% - 250px);
+    margin-top: 120px;
+    margin-left: 250px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-gap: 20px 5px;
+    overflow-x: hidden;
+}
+
+.video{
+    min-height: 250px;
+    height: auto;
+}
+
+.thumbnail{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.content{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.channel-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.title{
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.channel-name{
+    font-size: 14px;
+    margin: 2px 0;
+    color: #AAAAAA;
+}
